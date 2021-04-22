@@ -34,13 +34,6 @@ public class UserController {
     //POST request to "/users/login"
     @RequestMapping(method= RequestMethod.POST,value="/users/login")
     public String loginUser(User user, HttpSession session){
-        //Check if the credential match
-        /*if(userService.login(user)){
-            return "redirect:/posts";
-        }
-        else{
-            return "users/login";
-        }*/
         User existingUser=userService.login(user);
         if(existingUser == null) {
             System.out.println("USER DOES NOT EXIST");
