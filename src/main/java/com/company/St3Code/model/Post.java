@@ -14,14 +14,14 @@ public class Post {
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "title")
-    private String title;
+    @Column(name = "name")
+    private String name;
 
-    @Column(name = "body")
-    private String body;
+    @Column(name = "number")
+    private String number;
 
-    @Column(name = "date")
-    private Date date;
+    @Column(name = "email")
+    private String email;
 
     //Relationships
     @ManyToOne(fetch = FetchType.EAGER)
@@ -40,28 +40,28 @@ public class Post {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getBody() {
-        return body;
+    public String getNumber() {
+        return number;
     }
 
-    public void setBody(String body) {
-        this.body = body;
+    public void setNumber(String number) {
+        this.number = number;
     }
 
-    public Date getDate() {
-        return date;
+    public String getEmail() {
+        return email;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public User getUser() {

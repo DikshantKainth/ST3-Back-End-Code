@@ -46,7 +46,7 @@ public class PostController {
         newPost.setUser(user);
 
         //PostService postService=new PostService();
-        newPost.setDate(new Date());
+        //newPost.setDate(new Date());
         postService.createPost(newPost);
         return "redirect:/posts";
     }
