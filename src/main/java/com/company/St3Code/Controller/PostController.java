@@ -27,8 +27,7 @@ public class PostController {
         //Getting post of particular user
         User user=(User)session.getAttribute("LoggedUser");
         List<Post> posts=postService.getAllPosts(user.getId());
-        //PostService postService=new PostService();
-        //List<Post> posts=postService.getAllPosts();
+        
         model.addAttribute("posts",posts);
         return "posts";
     }
@@ -45,8 +44,7 @@ public class PostController {
         User user=(User)session.getAttribute("LoggedUser");
         newPost.setUser(user);
 
-        //PostService postService=new PostService();
-        //newPost.setDate(new Date());
+        
         postService.createPost(newPost);
         return "redirect:/posts";
     }
